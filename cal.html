@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>calculator!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.min.css">
+  <script src="bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="jq/jquery-3.1.1.min.js"></script>
+  <script src = "angular.min.js"> </script>
+  <script src = "app.js"> </script>
+  </head>
+
+<body ng-app="myApp">
+<div class = "container">
+<div class = "jumbotron "  ng-controller="cal">
+
+<h1 style="text-align: left;"> <I> CALCULATOR </I> </h1>
+<br>
+<b> NUMBER : 1 : </b>  <input type="number"  ng-model="n1" size="10" autofocus> <span>  &emsp; &ensp; </span>
+<b> NUMBER : 2 :  </b> <input type="number"  ng-model="n2" size = "10"><br>
+<br><br>
+
+<div class = "row">
+ <div class="col-sm-6">
+<button ng-click="addshow()" class="btn btn-primary" > ADD </button> <span ng-show="addchk">&emsp; <b> {{add()}} </b></span>
+<br><br>
+<button ng-click="subchk = true " class="btn btn-primary"> SUB </button> <span ng-show="subchk">&emsp; <b> {{sub()}} </b></span>
+
+<br><br>
+<button ng-click="mulchk = true" class="btn btn-primary"> MUL </button>  <span ng-show="mulchk">&emsp; <b> {{mul()}} </b></span>
+
+<br><br>
+<button ng-click="divchk = true" class="btn btn-primary"> DIV </button>  <span ng-show="divchk">&emsp; <b> {{div()}} </b></span>
+
+<br><br>
+<button ng-click="clear()" class="btn btn-danger"> CLEAR </button>
+</div>
+
+ <div class="col-sm-6">
+
+<button ng-click="powchk = true" class="btn btn-info"> POWER(n1**n2) </button> <span ng-show="powchk">&emsp; <b> {{pow()}} </b>
+																				</span>
+
+<br><br>
+<button ng-click="sqrtchk = true" class="btn btn-info"> SQRT (n1) </button>  <span ng-show="sqrtchk">&emsp; <b> {{sqrt()}} </b></span>
+
+<br><br>
+<button ng-click="logchk = true" class="btn btn-info"> LOG(n1) </button>  <span ng-show="logchk">&emsp; <b> {{log()}} </b></span>
+
+<br><br>
+<button ng-click="sinshow()" class="btn btn-info"> SIN(n1) </button>  <span ng-show="sinchk">&emsp; <b> {{sin()}} </b></span>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class = "container"  ng-controller="Ctrl">
+<br>
+First Name: <input type="text" class="form-control" ng-model="firstName"><br>
+Last Name: <input type="text" class="form-control" ng-model="lastName"><br>
+<br>
+Full Name: {{fullName()}}
+<p mydir> </p>
+</div> -->
+
+  
+  </body>
+  
+  </html>
